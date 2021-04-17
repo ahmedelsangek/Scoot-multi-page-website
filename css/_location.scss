@@ -1,0 +1,120 @@
+@import "./variables";
+@import "./helpers";
+
+// Start Location Header
+.location-header {
+  @extend .aboute-header;
+  background-image: url("../assets/images/careers-locations-hero-desktop.jpg");
+  @media (max-width: 992px) {
+    background-image: url("../assets/images/careers-locations-hero-tablet.jpg");
+  }
+  @media (max-width: 576px) {
+    background-image: url("../assets/images/careers-location-hero-mobile.jpg");
+  }
+}
+// End Location Header
+
+// Start Location Map
+section {
+  padding: 100px 0;
+  .map {
+    max-width: 2220px;
+    max-height: 1086px;
+    img {
+      width: 100%;
+    }
+    @media (min-width: 992px) {
+      .world-map-desktop {
+        display: block;
+      }
+      .world-map-tablet,
+      .world-map-mobile {
+        display: none;
+      }
+    }
+    @media (max-width: 992px) {
+      .world-map-tablet {
+        display: block;
+      }
+      .world-map-desktop,
+      .world-map-mobile {
+        display: none;
+      }
+    }
+    @media (max-width: 768px) {
+      .world-map-mobile {
+        display: block;
+      }
+      .world-map-desktop,
+      .world-map-tablet {
+        display: none;
+      }
+    }
+  }
+  .countries-list {
+    margin: 70px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    @media (max-width: 768px) {
+      display: flex;
+    }
+    li {
+      width: 320px;
+      padding: 20px 0;
+      background-color: $color-light-yellow;
+      margin: 16px 0;
+      font-family: $font-family-mono;
+      font-size: 24px;
+      font-weight: $weight-bold;
+    }
+  }
+  .info {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 1200px) {
+      flex-direction: column;
+    }
+    h2 {
+      margin: 0;
+      font-size: 48px;
+      max-width: 350px;
+      @media (max-width: 1200px) {
+        padding: 0 30px;
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+    p {
+      max-width: 445px;
+      font-size: 15px;
+      margin: 0;
+      color: $color-dim-grey;
+      @media (max-width: 1200px) {
+        margin: 40px 0;
+        padding: 0 30px;
+      }
+    }
+    button {
+      @extend %btn;
+      &:hover {
+        @extend %btnHover;
+      }
+    }
+  }
+}
+// End Location Map
+
+// Start Care to join
+.join-careers {
+  .slide-2 {
+    padding: 0;
+    p {
+      color: $color-dim-grey;
+    }
+  }
+}
+// End Care to join

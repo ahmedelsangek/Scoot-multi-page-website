@@ -1,0 +1,51 @@
+@import "./variables";
+@import "./helpers";
+
+// Start Careers Header
+.careers-header {
+  @extend .aboute-header;
+  background-image: url("../assets/images/careers-locations-hero-desktop.jpg");
+  @media (max-width: 992px) {
+    background-image: url("../assets/images/careers-locations-hero-tablet.jpg");
+  }
+  @media (max-width: 576px) {
+    background-image: url("../assets/images/careers-location-hero-mobile.jpg");
+  }
+}
+// End Careers Header
+
+// Start positions
+.positions {
+  .container {
+    padding: 0 32px;
+    ul {
+      li {
+        background-color: $color-snow;
+        display: flex;
+        align-items: center;
+        padding: 32px 64px 35px 40px;
+        &:not(:last-of-type) {
+          margin-bottom: 24px;
+        }
+        h3 {
+          font-weight: $weight-bold;
+          font-size: 24px;
+        }
+        p {
+          margin: 0;
+        }
+        button {
+          @extend %btn;
+          &.active {
+            background: none;
+            color: $color-yellow;
+          }
+          &:hover {
+            @extend %btnHover;
+          }
+        }
+      }
+    }
+  }
+}
+// End positions

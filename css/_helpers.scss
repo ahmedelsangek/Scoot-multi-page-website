@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca|Space+Mono:400,700&display=swap");
+
+* {
+  transition: $transition;
+}
+body {
+  font-family: $font-family-sans;
+  background-color: $color-white;
+  color: $color-dim-grey;
+  overflow-x: hidden;
+}
+.container {
+  padding-right: 0;
+  padding-left: 0;
+}
+h1,
+h2,
+h3,
+h3 {
+  font-family: $font-family-mono;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+::-webkit-scrollbar {
+  background: none;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $color-yellow;
+  border-radius: 10px;
+  border: 1px solid red;
+}
+
+%btn {
+  color: #fff;
+  background-color: $color-yellow;
+  width: 180px;
+  height: 52px;
+  border-radius: 0;
+  outline: none;
+  border: 3px solid $color-yellow;
+  transition: $transition;
+  font-family: $font-family-mono;
+  font-weight: $weight-bold;
+  cursor: pointer;
+}
+%btnHover {
+  background: none;
+  color: $color-yellow;
+  border: 3px solid $color-yellow;
+}
