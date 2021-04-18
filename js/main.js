@@ -3,9 +3,9 @@ let collapseButton = document.querySelectorAll(".card-header button");
 collapseButton.forEach((btn) => {
     btn.addEventListener("click", () => {
         if (btn.getAttribute("aria-expanded") === "true") {
-            btn.firstElementChild.lastElementChild.firstElementChild.src = ("../assets/icons/arrow-down.svg");
+            btn.firstElementChild.lastElementChild.firstElementChild.src = ("../assets/icons/arrow-down.png");
         } else {
-            btn.firstElementChild.lastElementChild.firstElementChild.src = ("../assets/icons/arrow-up.svg");
+            btn.firstElementChild.lastElementChild.firstElementChild.src = ("../assets/icons/arrow-up.png");
         }
     })
 })
