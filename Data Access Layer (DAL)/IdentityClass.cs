@@ -19,6 +19,8 @@ namespace Data_Access_Layer__DAL_
         public AppUserStore(DbContext d) : base(d) { }
     }
 
+    
+
     public class AppUserManager : UserManager<AppIdentityUser>
     {
         public AppUserManager() : base(new AppUserStore()) { }
@@ -36,24 +38,25 @@ namespace Data_Access_Layer__DAL_
         {
 
         }
+    }
 
-        public class Order
+    public class Order
+    {
+        public int Id { get; set; }
+        public string date { get; set; }
+        public string Description { get; set; }
+        public int totalPrice { get; set; }
+        public int discount { get; set; }
+        public virtual AppIdentityUser appUser { get; set; }
+    }
+
+    public class ApplicationDBContext : IdentityDbContext<AppIdentityUser>
+    {
+
+        public ApplicationDBContext() : base("Data Source=.;Initial Catalog=ECommDB; Integrated Security=True")
         {
-            public int Id { get; set; }
-            public string date { get; set; }
-            public string Description { get; set; }
-            public int totalPrice { get; set; }
-            public int discount { get; set; }
-            public virtual AppIdentityUser appUser { get; set; }
-        }
-        public class ApplicationDBContext : IdentityDbContext<AppIdentityUser>
-        {
 
-            public ApplicationDBContext() : base("Data Source=.;Initial Catalog=ECommDB; Integrated Security=True")
-            {
-
-            }
-            public virtual DbSet<Order> Orders { get; set; }
         }
+        public virtual DbSet<Order> Orders { get; set; }
     }
 }
