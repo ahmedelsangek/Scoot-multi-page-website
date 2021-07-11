@@ -50,6 +50,8 @@ namespace Data_Access_Layer__DAL_
         public virtual AppIdentityUser appUser { get; set; }
     }
 
+    public class type { }
+
     public class ApplicationDBContext : IdentityDbContext<AppIdentityUser>
     {
 
@@ -59,4 +61,4 @@ namespace Data_Access_Layer__DAL_
         }
         public virtual DbSet<Order> Orders { get; set; }
     }
-}
+}                    
