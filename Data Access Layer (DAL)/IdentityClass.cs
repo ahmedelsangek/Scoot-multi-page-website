@@ -19,7 +19,7 @@ namespace Data_Access_Layer__DAL_
         public AppUserStore(DbContext d) : base(d) { }
     }
 
-    
+
 
     public class AppUserManager : UserManager<AppIdentityUser>
     {
@@ -45,12 +45,19 @@ namespace Data_Access_Layer__DAL_
         public int Id { get; set; }
         public string date { get; set; }
         public string Description { get; set; }
-        public int totalPrice { get; set; }
+        public int price { get; set; }
         public int discount { get; set; }
+        public int stock { get; set; }
+        public type type { get; set; }
         public virtual AppIdentityUser appUser { get; set; }
     }
 
-    public class type { }
+    public class type
+    {
+        public int Id { get; set; }
+        public string name { get; set; }
+        public ICollection<Order> order { get; set; }
+    }
 
     public class ApplicationDBContext : IdentityDbContext<AppIdentityUser>
     {
@@ -60,5 +67,6 @@ namespace Data_Access_Layer__DAL_
 
         }
         public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<type> types { get; set; }
     }
-}                    
+}
