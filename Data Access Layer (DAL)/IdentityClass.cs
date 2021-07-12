@@ -48,6 +48,7 @@ namespace Data_Access_Layer__DAL_
         public int price { get; set; }
         public int discount { get; set; }
         public int stock { get; set; }
+        public string img { get; set; }
         public type type { get; set; }
         public virtual AppIdentityUser appUser { get; set; }
     }
