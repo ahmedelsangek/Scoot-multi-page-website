@@ -11,6 +11,6 @@ namespace Business_Layer__BL_.ViewModels
     {
         public int Id { get; set; }
         public string name { get; set; }
-        public ICollection<Order> order { get; set; }
+        public ICollection<product> product { get; set; } //updated relation in data layer ..Y
     }
 }

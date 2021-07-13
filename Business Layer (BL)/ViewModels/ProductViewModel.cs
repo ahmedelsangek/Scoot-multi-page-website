@@ -21,6 +21,7 @@ namespace Business_Layer__BL_.ViewModels
         public string img { get; set; }
 
         [Required]
-        public Category type { get; set; }
+        public Category category { get; set; } // updated in data layer from type to cateogry..Y
+        public Order order { get; set; }
     }
 }

@@ -45,11 +45,10 @@ namespace Data_Access_Layer__DAL_
         public int Id { get; set; }
         public string date { get; set; }
         public string description { get; set; }
-        public int price { get; set; }
+        public int totalPrice { get; set; }
         public int discount { get; set; }
-        public int stock { get; set; }
-        public string img { get; set; }
-        public Category type { get; set; }  // updated from types to Categories  ..Milad
+        // public Category category { get; set; }  //(removed relation)..Y
+        public virtual ICollection<product> product { get; set; }
         public virtual AppIdentityUser appUser { get; set; }
     }
 
@@ -57,7 +56,21 @@ namespace Data_Access_Layer__DAL_
     {
         public int Id { get; set; }
         public string name { get; set; }
-        public ICollection<Order> order { get; set; }
+        public string img { get; set; }
+        public virtual ICollection<product> product { get; set; }
+    }
+
+    public class product 
+    {
+        public int Id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public int price { get; set; }
+        public int discount { get; set; }
+        public string img { get; set; }
+        public virtual Order order { get; set; }
+        public virtual Category category { get; set; }
+
     }
 
     public class ApplicationDBContext : IdentityDbContext<AppIdentityUser>
@@ -67,6 +80,7 @@ namespace Data_Access_Layer__DAL_
         {
 
         }
+        public virtual DbSet<product> Products { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Category> Categories { get; set; }  // updated from types to Categories  ..Milad
     }

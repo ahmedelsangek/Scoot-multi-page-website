@@ -15,8 +15,10 @@ namespace Business_Layer__BL_.ViewModels
         [Required]
         public string date { get; set; }
         public string description { get; set; }
-        public int price { get; set; }
+        public int totalPrice { get; set; } 
         public int? discount { get; set; }
-        public Category type { get; set; }
+        public ICollection<product> product { get; set; }
+
+        //public Category category { get; set; } // (removed relation)...Y
     }
 }
