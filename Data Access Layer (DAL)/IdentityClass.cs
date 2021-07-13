@@ -44,16 +44,16 @@ namespace Data_Access_Layer__DAL_
     {
         public int Id { get; set; }
         public string date { get; set; }
-        public string Description { get; set; }
+        public string description { get; set; }
         public int price { get; set; }
         public int discount { get; set; }
         public int stock { get; set; }
         public string img { get; set; }
-        public type type { get; set; }
+        public Category type { get; set; }  // updated from types to Categories  ..Milad
         public virtual AppIdentityUser appUser { get; set; }
     }
 
-    public class type
+    public class Category   // updated from types to Categories  ..Milad
     {
         public int Id { get; set; }
         public string name { get; set; }
@@ -68,6 +68,6 @@ namespace Data_Access_Layer__DAL_
 
         }
         public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<type> types { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }  // updated from types to Categories  ..Milad
     }
 }

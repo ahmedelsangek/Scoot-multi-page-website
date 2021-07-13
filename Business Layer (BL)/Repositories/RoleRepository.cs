@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business_Layer__BL_
+namespace Business_Layer__BL_.Repositories
 {
-    public class Class1
+    class RoleRepository
     {
     }
 }
