@@ -1,5 +1,5 @@
 
-#S coot website - a multi-page website built from designs provided by frontendmentor.io
+# Scoot website - a multi-page website built from designs provided by frontendmentor.io
 
 * About this project
 * This was a premium challenge provided by Front End Mentor.
